@@ -29,12 +29,12 @@ if(_CMRC_GENERATE_MODE)
     return()
 endif()
 
+set(this_script "${CMAKE_CURRENT_LIST_FILE}")
+
 if(COMMAND cmrc_add_resource_library)
     # CMakeRC has already been included! Don't do anything
     return()
 endif()
-
-set(this_script "${CMAKE_CURRENT_LIST_FILE}")
 
 # CMakeRC uses std::call_once().
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
